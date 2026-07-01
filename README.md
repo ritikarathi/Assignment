@@ -92,21 +92,6 @@ Authorization: Bearer <token>
 
 ---
 
-## Project Structure
-
-src/main/java/com/example/Assignment
-├── security
-│   ├── config        → Security configuration
-│   ├── jwt           → JWT service
-│   ├── filter        → JWT authentication filter
-│   └── service       → CustomUserDetailsService
-├── controller        → REST APIs
-├── entity            → Database models
-├── repository        → JPA repositories
-└── service           → Business logic
-
----
-
 ## Key Components
 
 JwtService → Generates and validates JWT tokens  
