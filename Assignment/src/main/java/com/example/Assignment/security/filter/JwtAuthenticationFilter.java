@@ -1,5 +1,21 @@
 package com.example.Assignment.security.filter;
+import jakarta.servlet.*;
+import jakarta.servlet.http.HttpServletRequest;
+import org.springframework.stereotype.Component;
+import org.springframework.web.filter.OncePerRequestFilter;
 
-public class JwtAuthenticationFilter {
+import java.io.IOException;
 
+@Component
+public class JwtAuthenticationFilter extends OncePerRequestFilter {
+
+    @Override
+    protected void doFilterInternal(
+            HttpServletRequest request,
+            jakarta.servlet.http.HttpServletResponse response,
+            FilterChain filterChain)
+            throws ServletException, IOException {
+
+        filterChain.doFilter(request, response);
+    }
 }
