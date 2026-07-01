@@ -1,7 +1,7 @@
 package com.example.Assignment.repository;
 
 import org.springframework.data.jpa.repository.JpaRepository;
-import org.springframework.security.core.userdetails.User;
+import com.example.Assignment.entity.User;
 
 import java.util.Optional;
 
