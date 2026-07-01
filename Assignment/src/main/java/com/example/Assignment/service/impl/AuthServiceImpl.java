@@ -53,6 +53,7 @@ public class AuthServiceImpl implements AuthService {
 
         return new AuthResponse(
                 token,
+                user.getRole().name(),
                 "User registered successfully"
         );
     }
@@ -78,9 +79,6 @@ public class AuthServiceImpl implements AuthService {
 
         String token = jwtService.generateToken(userDetails);
 
-        return new AuthResponse(
-                token,
-                "Login successful"
-        );
+        return new AuthResponse(token, user.getRole().name(),"Login successful");
     }
 }
